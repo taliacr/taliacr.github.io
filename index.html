@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Project 2 - Talia Crawford</title>
+
+    <!--set for mobile viewing to prevent viewing issues-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+        #content {
+            color: blue;
+            font-size: 40px;
+            background-color: white;
+            text-align: center;
+        }
+
+        h1 {
+            color: #5795ee;
+            font-size: 20px;
+            background-color: white;
+        }
+
+        .bt {
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            align-content: center;
+            background-color: transparent;
+        }
+
+        .img {
+            height: 12px;
+            width: 12px;
+            text-align: center;
+            align-content: center;
+
+        }
+
+    </style>
+
+</head>
+
+
+
+
+<body>
+
+    <!-- HTML content-->
+    <div class="container-fluid" id="content">
+
+        <div id="parent" class="row text-center">
+            <h1 class="text-primary text-center">Mini Project 2</h1>
+
+            <h1 id="input" class="text-primary text-center"></h1>
+
+            <div id = "start" class="row text-center">
+            
+            
+            
+        </div>
+
+        <!--row 4-->
+        <div id="calc_btn_row_4" class="btn-group">
+
+            <button type="button" id="btn_7" value="7"
+                    class="btn btn-primary ui-btn ui-corner-all ui-btn-inline ui-btn-b">7</button>
+
+            <button type="button" id="btn_8" value="8"
+                    class="btn btn-primary ui-btn ui-corner-all ui-btn-inline ui-btn-b">8</button>
+
+            <button type="button" id="btn_9" value="9"
+                    class="btn btn-primary ui-btn ui-corner-all ui-btn-inline ui-btn-b">9</button>
+
+            <button type="button" id="btn_div" 
+		    class="btn btn-primary ui-btn ui-corner-all ui-btn-inline ui-btn-b">/</button>
+
+        </div>
+
+        <!--row 3-->
+        <div id="calc_btn_row_3" class="btn-group">
+
+            <button type="button" id="btn_4" value="4"
+                    class="btn btn-primary ui-btn ui-corner-all ui-btn-inline ui-btn-b">4</button>
+
+            <button type="button" id="btn_5" value="5"
+                    class="btn btn-primary ui-btn ui-corner-all ui-btn-inline ui-btn-b">5</button>
+
+            <button type="button" id="btn_6" value="6"
+                    class="btn btn-primary ui-btn ui-corner-all ui-btn-inline ui-btn-b">6</button>
+
+            <button type="button" id="btn_mult" 
+		    class="btn btn-primary ui-btn ui-corner-all ui-btn-inline ui-btn-b">*</button>
+
+        </div>
+
+        <!--row 2-->
+        <div id="calc_btn_row_2" class="btn-group">
+
+            <button type="button" id="btn_1" value="1"
+                    class="btn btn-primary ui-btn ui-corner-all ui-btn-inline ui-btn-b">1</button>
+
+            <button type="button" id="btn_2" value="2"
+                    class="btn btn-primary ui-btn ui-corner-all ui-btn-inline ui-btn-b">2</button>
+
+            <button type="button" id="btn_3" value="3"
+                    class="btn btn-primary ui-btn ui-corner-all ui-btn-inline ui-btn-b">3</button>
+
+            <button type="button" id="btn_sub" 
+		    class="btn btn-primary ui-btn ui-corner-all ui-btn-inline ui-btn-b">-</button>
+
+        </div>
+
+        <!--row 1-->
+        <div id="calc_btn_row_1" class="btn-group">
+
+            <button type="button" id="btn_0" value="0"
+                    class="btn btn-primary ui-btn ui-corner-all ui-btn-inline ui-btn-b">0</button>
+
+            <button type="button" id="btn_period" value="."
+                    class="btn btn-primary ui-btn ui-corner-all ui-btn-inline ui-btn-b">.</button>
+
+            <button type="button" id="btn_equals" 
+		    class="btn btn-primary ui-btn ui-corner-all ui-btn-inline ui-btn-b">=</button>
+
+            <button type="button" id="btn_add" 
+		    class="btn btn-primary ui-btn ui-corner-all ui-btn-inline ui-btn-b">+</button>
+
+        </div>
+<button type="button" id="btn_ce" 
+		class="btn btn-primary ui-btn ui-corner-all ui-btn-inline ui-btn-b">Clear</button>
+
+    </div>
+    
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <hr class="hr">
+
+
+    <script>
+
+    var result=[];
+    var d;
+    var e;
+    var f;
+
+
+    $('#btn_ce').on('click', function () {
+        result.splice(0);
+        $('#input').empty();
+
+    });
+
+     $('#btn_1').on('click', function () {
+         result.push(1);
+         $('#input').html(result);
+     });
+
+     $('#btn_2').on('click', function () {
+         result.push(2);
+         $('#input').html(result);
+     });
+
+     $('#btn_3').on('click', function () {
+        result.push(3);
+        $('#input').html(result);
+    });
+
+     $('#btn_4').on('click', function () {
+        result.push(4);
+        $('#input').html(result);
+    });
+
+    $('#btn_5').on('click', function () {
+         result.push(5);
+        $('#input').html(result);
+    });
+
+    $('#btn_6').on('click', function () {
+        result.push(6);
+        $('#input').html(result);
+    });
+
+    $('#btn_7').on('click', function () {
+         result.push(7);
+        $('#input').html(result);
+    });
+
+    $('#btn_8').on('click', function () {
+         result.push(8);
+        $('#input').html(result);
+    });
+
+    $('#btn_9').on('click', function () {
+         result.push(9);
+        $('#input').html(result);
+    });
+
+    $('#btn_0').on('click', function () {
+         result.push(0);
+        $('#input').html(result);
+    });
+
+    $('#btn_period').on('click', function () {
+        result.push('.');
+        $('#input').html(result);
+    });   
+
+
+    function calculation(){
+
+        result.forEach(function(element,index,array){
+            if (isNaN(parseInt(element)) && element != "." && index != result.length-1) {
+
+                d = result.splice(0,index).join("");
+                e = result.splice(1,result.length-2).join("");
+
+                if (element=="+") {
+                    f = parseFloat(d) + parseFloat(e);
+                }
+
+                if (element=="-") {
+                    f = parseFloat(d) - parseFloat(e);
+                }
+
+                if (element=="*") {
+                    f = parseFloat(d) * parseFloat(e);
+                }
+
+                if (element=="/") {
+                    f = parseFloat(d) / parseFloat(e);
+                }
+
+                result[0]=f;
+
+                $('#input').html(f);
+
+            }
+        });
+
+    }
+
+    function empty(){
+            if (parseFloat(f)!= 0 && result.length == 0) {
+                result[0] = f;
+            }
+    }
+
+    $('#btn_add').on('click', function () {
+        empty();
+        result.push('+');
+        $('#input').html(result);
+        calculation();
+    });
+
+    $('#btn_sub').on('click', function () {
+        empty();
+        result.push('-');
+        $('#input').html(result);
+        calculation();
+    });
+
+    $('#btn_div').on('click', function () {
+        empty();
+        result.push('/');
+        $('#input').html(result);
+        calculation();
+    });
+
+    $('#btn_mult').on('click', function () {
+        empty();
+        result.push('x');
+        $('#input').html(result);
+        calculation();
+    });
+
+
+    $('#btn_equals').on('click', function(){
+
+        result.forEach(function(element,index,array){
+
+            if (isNaN(parseInt(element)) && element != ".") {
+                d = result.splice(0,index).join("");
+                e = result.splice(1).join("");
+
+                if (element=="+") {
+                    f = parseFloat(d) + parseFloat(e);
+                }
+
+                if (element=="-") {
+                    f = parseFloat(d) - parseFloat(e);
+                }
+
+                if (element=="x") {
+                    f = parseFloat(d) * parseFloat(e);
+                }
+
+                if (element=="/") {
+                    f = parseFloat(d) / parseFloat(e);
+                }
+
+                $('#input').html(f);
+                result.splice(0);
+
+            }
+        });
+    });
+
+
+    </script>
+
+
+
+
+</body>
+</html>
